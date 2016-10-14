@@ -1,3 +1,5 @@
 See example.py for an example of using the fram framework.
 
+Helps with CLI by automatically giving you basic options for free.
+
 Also fram_config, fram_daemon, and fram_logging.
