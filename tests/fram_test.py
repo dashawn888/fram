@@ -1,5 +1,8 @@
 """Fram core framework unittests."""
 # pylint:disable=invalid-name,missing-docstring,too-many-public-methods
+
+__author__ = "Shawn Lee"
+
 import sys
 
 import unittest

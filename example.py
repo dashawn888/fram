@@ -34,6 +34,8 @@ examples:
 """
 # pylint:disable=unused-import
 
+__author__      = "Shawn Lee"
+
 import time
 
 import fram

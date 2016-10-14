@@ -1,4 +1,7 @@
 """Fram framework bootstrap module."""
+
+__author__ == "Shawn Lee"
+
 import argparse
 import sys
 

@@ -1,4 +1,7 @@
 """Fram basic bootstraping module."""
+
+__author__ = "Shawn Lee"
+
 try:
     from setuptools import setup, find_packages
 except ImportError:
