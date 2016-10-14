@@ -1,9 +1,10 @@
 """Fram framework bootstrap module."""
 
-__author__ = "Shawn Lee"
-
 import argparse
 import sys
+import six
+
+__author__ = "Shawn Lee"
 
 
 def fram_plugins():
@@ -24,7 +25,7 @@ def parser_from_plugins(plugins, description):
     parser = argparse.ArgumentParser(description, conflict_handler="resolve")
     for plugin in plugins:
         if "argparse" in plugin:
-            for argument, options in plugin["argparse"].iteritems():
+            for argument, options in six.iteritems(plugin["argparse"]):
                 kwargs = {}
                 for option in ["help", "action", "default", "required"]:
                     val = options.get(option)

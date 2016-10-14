@@ -11,7 +11,7 @@ from datetime import datetime
 
 major = 0
 minor = 1
-stamp = 1
+stamp = 2
 
 setup(
     name="python-fram",
