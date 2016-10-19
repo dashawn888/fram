@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """An example program that utilizes the fram framework.
 
 examples:
@@ -34,20 +35,19 @@ examples:
 """
 # pylint:disable=unused-import
 
-__author__      = "Shawn Lee"
-
-import time
-
 import fram
 import fram_config
 import fram_daemon
 from fram_logging import FramLogging
 
+__author__ = "Shawn Lee"
+__email__ = "shawn@143t.com"
+
 # pylint:enable=unused-import
 
 # The logging object must be defined as LOGGER.  This is performed implicitly
-# since the fram_logging module uses introspection to find a logger named LOGGER
-# of type FramLogging.
+# since the fram_logging module uses introspection to find a logger named
+# LOGGER of type FramLogging.
 LOGGER = FramLogging.getLogger("example")
 
 
@@ -86,7 +86,7 @@ def main(framework):
     LOGGER.debug("DEBUG MESSAGE")
     LOGGER.error("ERROR MESSAGE")
     if framework["argparse"].hello:
-        print "HELLO"
+        print("HELLO")
     if framework["argparse"].daemon:
         while True:
             time.sleep(5)
