@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Fram framework bootstrap module."""
 
 import argparse
@@ -5,6 +6,7 @@ import sys
 import six
 
 __author__ = "Shawn Lee"
+__email__ = "shawn@143t.com"
 
 
 def fram_plugins():
@@ -60,7 +62,7 @@ def parser_callbacks(plugins, parser):
         # Since we have parsed_args, go through all callbacks.
         for plugin in plugins:
             if "argparse" in plugin:
-                for argument, options in plugin["argparse"].iteritems():
+                for argument, options in six.iteritems(plugin["argparse"]):
                     if "callback" in options:
                         framework[argument.strip("-")] = (
                             options["callback"](getattr(
