@@ -1,17 +1,17 @@
+# -*- coding: utf-8 -*-
 """Fram basic bootstraping module."""
 
-__author__ = "Shawn Lee"
-
 try:
-    from setuptools import setup, find_packages
+    from setuptools import setup
 except ImportError:
     from distutils.core import setup
 
-from datetime import datetime
+__author__ = "Shawn Lee"
+__email__ = "shawn@143t.com"
 
 major = 0
 minor = 1
-stamp = 2
+stamp = 3
 
 setup(
     name="python-fram",
@@ -21,9 +21,9 @@ setup(
     author_email="shawn@143t.com",
     packages=["fram"],
     package_dir={"fram": "fram"},
-    options={ "bdist_rpm": {
+    options={"bdist_rpm": {
             "requires": [
                 "python-argparse"]}},
     tests_require=["coverage", "mox"],
-    test_suite = "tests"
+    test_suite="tests"
 )
