@@ -1,15 +1,14 @@
+# -*- coding: utf-8 -*-
 """Fram core framework unittests."""
-# pylint:disable=invalid-name,missing-docstring,too-many-public-methods
-
-__author__ = "Shawn Lee"
-
 import sys
-
 import unittest
 
 import stubout
 
-import fram  # pylint:disable=relative-import
+import fram
+
+__author__ = "Shawn Lee"
+__email__ = "shawn@143t.com"
 
 
 ####################
@@ -42,6 +41,7 @@ FRAM_PLUGIN = {
 
 class FramTests(unittest.TestCase):
     """Test the core framework."""
+
     parser = None
     plugin = None
 
@@ -50,7 +50,8 @@ class FramTests(unittest.TestCase):
         self.stubs.Set(sys, "argv", ["python", "--test"])
         plugins = fram.fram_plugins()
         self.stubs.Set(
-            self, "parser", fram.parser_from_plugins(plugins, "NO DESCRIPTION"))
+            self, "parser", fram.parser_from_plugins(plugins,
+                                                     "NO DESCRIPTION"))
         self.stubs.Set(self, "plugin", plugins.pop())
 
     def tearDown(self):

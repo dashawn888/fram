@@ -33,11 +33,11 @@ examples:
     python example.py --config test.ini --warning
         Sets the logging level to warning or below.
 """
-# pylint:disable=unused-import
+import time
 
 import fram
-import fram_config
-import fram_daemon
+import fram_config  # NOQA
+import fram_daemon  # NOQA
 from fram_logging import FramLogging
 
 __author__ = "Shawn Lee"
@@ -60,7 +60,8 @@ def argument_parser(parser):
     method.  The parser method will be passed in the parser argument and is
     expected to return a parser object.
 
-    The parser object delivered is an argparse object."""
+    The parser object delivered is an argparse object.
+    """
     parser.add_argument(
         "-s", "--hello", help="Say Hello.", action="store_true")
     return parser
@@ -80,7 +81,8 @@ def main(framework):
         "argparse": Namespace(
             All the values of the args passed in by the cli.),
         "config": <ConfigParser.ConfigParser instance at 0x7f8fe602bf80>
-    }"""
+    }
+    """
     LOGGER.info("INFO MESSAGE")
     LOGGER.warning("WARNING MESSAGE")
     LOGGER.debug("DEBUG MESSAGE")
