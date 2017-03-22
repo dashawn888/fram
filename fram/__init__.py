@@ -6,7 +6,7 @@ import sys
 import six
 
 __author__ = "Shawn Lee"
-__email__ = "shawn@143t.com"
+__email__ = "dashawn@gmail.com"
 
 
 def fram_plugins():

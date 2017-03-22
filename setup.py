@@ -7,7 +7,7 @@ except ImportError:
     from distutils.core import setup
 
 __author__ = "Shawn Lee"
-__email__ = "shawn@143t.com"
+__email__ = "dashawn@gmail.com"
 
 major = 0
 minor = 1
@@ -18,7 +18,7 @@ setup(
     version=".".join([str(x) for x in [major, minor, stamp]]),
     description="Fram basic bootstraping module.",
     author="Shawn Lee",
-    author_email="shawn@143t.com",
+    author_email="dashawn@gmail.com",
     packages=["fram"],
     package_dir={"fram": "fram"},
     options={"bdist_rpm": {
