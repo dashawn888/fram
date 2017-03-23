@@ -8,7 +8,7 @@ import stubout
 import fram
 
 __author__ = "Shawn Lee"
-__email__ = "shawn@143t.com"
+__email__ = "dashawn@gmail.com"
 
 
 ####################
@@ -24,6 +24,7 @@ def main_decorator(_):
 def callback(_):
     """Stub callback."""
     return {"Water": True}
+
 
 FRAM_PLUGIN = {
     "argparse": {
@@ -50,8 +51,8 @@ class FramTests(unittest.TestCase):
         self.stubs.Set(sys, "argv", ["python", "--test"])
         plugins = fram.fram_plugins()
         self.stubs.Set(
-            self, "parser", fram.parser_from_plugins(plugins,
-                                                     "NO DESCRIPTION"))
+            self, "parser", fram.parser_from_plugins(
+                plugins, "NO DESCRIPTION"))
         self.stubs.Set(self, "plugin", plugins.pop())
 
     def tearDown(self):
@@ -107,6 +108,7 @@ class FramTests(unittest.TestCase):
 
     def test_run(self):
         self.assertEqual(fram.run(lambda x: x), 5)
+
 
 if __name__ == "__main__":
     unittest.main()
