@@ -36,14 +36,12 @@ examples:
 import time
 
 import fram
-import fram_config  # NOQA
-import fram_daemon  # NOQA
+import fram_config
+import fram_daemon
 from fram_logging import FramLogging
 
 __author__ = "Shawn Lee"
 __email__ = "dashawn@gmail.com"
-
-# pylint:enable=unused-import
 
 # The logging object must be defined as LOGGER.  This is performed implicitly
 # since the fram_logging module uses introspection to find a logger named
@@ -92,6 +90,7 @@ def main(framework):
     if framework["argparse"].daemon:
         while True:
             time.sleep(5)
+
 
 if __name__ == "__main__":
     """Bootstrap the framework.
